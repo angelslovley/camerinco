@@ -11,6 +11,7 @@ import PropertyList from "./pages/PropertyList";
 import ReservationList from "./pages/ReservationList";
 import CategoryPage from "./pages/CategoryPage";
 import SearchPage from "./pages/SearchPage";
+import BookingListing from './pages/BookListingPage'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/create-listing" element={<CreateListing />} />
+
+          <Route path="/booking-listing" element={<BookingListing/>}/>
           <Route path="/properties/:listingId" element={<ListingDetails />} />
           <Route path="/properties/category/:category" element={<CategoryPage />} />
           <Route path="/properties/search/:search" element={<SearchPage />} />

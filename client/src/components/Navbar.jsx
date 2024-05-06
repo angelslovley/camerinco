@@ -84,6 +84,7 @@ const Navbar = () => {
             <Link to={`/${user._id}/properties`}>Co-Property List</Link>
             <Link to={`/${user._id}/reservations`}>Reservation List</Link>
             <Link to="/create-listing">Become A Host</Link>
+            <Link to="/booking-listing">Booking Listing</Link>
 
             <Link
               to="/login"

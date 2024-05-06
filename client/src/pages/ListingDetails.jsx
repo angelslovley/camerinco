@@ -57,7 +57,7 @@ const ListingDetails = () => {
 
   const start = new Date(dateRange[0].startDate);
   const end = new Date(dateRange[0].endDate);
-  const dayCount = Math.round(end - start) / (1000 * 60 * 60 * 24); // Calculate the difference in day unit
+  const dayCount = Math.round(end - start) / (1000 * 60 * 60 * 24) + 1; // Calculate the difference in day unit
 
   /* SUBMIT BOOKING */
   const customerId = useSelector((state) => state?.user?._id)
@@ -72,7 +72,7 @@ const ListingDetails = () => {
         hostId: listing.creator._id,
         startDate: dateRange[0].startDate.toDateString(),
         endDate: dateRange[0].endDate.toDateString(),
-        totalPrice: listing.price * dayCount,
+        totalPrice: listing.price * dayCount , 
       }
 
       const response = await fetch("http://localhost:3001/bookings/create", {
